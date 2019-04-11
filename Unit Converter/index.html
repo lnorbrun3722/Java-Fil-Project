@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Unit Converter</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Unit Converter</h1>
+        <div class="input-group mb-3">
+            <input type="number" class="form-control" id="input" name="input" placeholder="Enter value here...">
+            <div class="input-group-append">
+                <span class="input-group-text">lbs</span>
+            </div>
+        </div>
+        <section id="output">
+            <!-- Gram -->
+            <div class="card bg-primary mb-3">
+                <div class="card-header">
+                    <h4>Grams:</h4>
+                    <div id="gram"></div>
+                </div>
+            </div>
+            <!-- Kilogram -->
+            <div class="card bg-success mb-3">
+                <div class="card-header">
+                    <h4>Kilograms:</h4>
+                    <div id="kilogram"></div>
+                </div>
+            </div>
+            <!-- Ounce -->
+            <div class="card bg-danger">
+                <div class="card-header">
+                    <h4>Ounces:</h4>
+                    <div id="ounce"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="main.js"></script>
+</body>
