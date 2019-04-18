@@ -1,12 +1,13 @@
-var input = document.querySelector("#input");
+const input = document.querySelector("#input");
 
-var unit = document.querySelector("#unit");
+const unit = document.querySelector("#unit");
 input.addEventListener("input", convert);
 unit.addEventListener("input", convert);
 
-function convert() {
-    var value = input.value;
-    var output = document.querySelector("#output");
+const convert () {
+    const value = input.value;
+    const output = document.querySelector("#output");
+    (value !== "")?
    if (value !== "") {
         output.style.display = "block";
      } else {
