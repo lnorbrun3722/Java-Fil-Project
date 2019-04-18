@@ -1,13 +1,12 @@
-var filter = document.querySelector("#filter");
+const filter = document.querySelector("#filter");
 
 filter.addEventListener("keyup", filterNames);
-
-function filterNames(){
-    var value = filter.value;
-    var names = document.querySelectorAll("li a");
-    for(var i=0;i<names.length;i++){
-        if(names[i].innerText.toUpperCase().includes(value.toUpperCase())) {
-            names[i].parentElement.style.display ="block"
+filterNames =() => {
+    const value = filter.value;
+    const names = document.querySelectorAll("li a");
+    for(let name of names){
+        if(names.innerText.toUpperCase().includes(value.toUpperCase())) {
+            names.parentElement.style.display ="block"
         }  else {
             names[i].parentElement.style.display ="none"
         }
