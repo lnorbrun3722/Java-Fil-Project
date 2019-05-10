@@ -1,0 +1,29 @@
+body {padding-top: 75px;
+    padding-bottom: 75px;
+ 
+ }
+ nav.navbar-dark a {
+     color: white;
+ }
+ 
+ nav.navbar-light a {
+     color: black;
+ }
+ /*Utility */
+ 
+     label {
+         font-weight: 700px;
+ 
+     }
+ a, a:hover {
+    text-decoration: none;
+ 
+ }
+ 
+ .list-group-flush .list-group-item {
+    border: 0;
+    ;
+ }
+ .full-width {
+     width: 100%
+ }

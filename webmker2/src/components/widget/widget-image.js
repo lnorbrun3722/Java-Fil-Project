@@ -4,28 +4,28 @@ export default class WidgetImage extends Component {
     render() {
         return (
             <div>
-                <div class="container">
+                <div className="container">
                     <form>
-                        <div class="form-group">
+                        <div className="form-group">
                             <label htmlFor="name">
                                 <b>Name</b>
                             </label>
                             <input type="text" id="name" class="form-control" />
                         </div>
-                        <div class="form-group">
+                        <div className="form-group">
                             <label htmlFor="url">
                                 <b>Url</b>
                             </label>
                             <input type="text" id="url" class="form-control" />
                         </div>
-                        <div class="form-group">
+                        <div className="form-group">
                             <label htmlFor="width">
                                 <b>Width</b>
                             </label>
                             <input
                                 type="text"
                                 id="width"
-                                class="form-control"
+                                className="form-control"
                             />
                         </div>
                         <Link
