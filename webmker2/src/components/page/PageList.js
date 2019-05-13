@@ -4,7 +4,7 @@ export default class Pagelist extends Component {
     render() {
         return (
             <div>
-                <nav className="navbar navbar-light fixed-top bg-light">"
+                <nav className="navbar navbar-light fixed-top bg-light">
         <Link className="color-black" to="/user/:uid/website">
                         <i className="fas-fa-chevron-left" />
                     </Link>

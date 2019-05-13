@@ -1,29 +1,49 @@
 import React, { Component } from "react";
+import {Link} from "react-router-dom";
+import uuid from "uuid";
 
 export default class WidgetChooser extends Component {
+
+    createWidget = type => {
+        const {uid, wid, pid} = this.props.match.params
+        const newWidget = {
+            _id: uuid(),
+            name: "",
+            widgetType: type,
+            pageId: pid,
+            text: "",
+            size: 1,
+            width: "",
+            url: ""
+        }
+        this.props.addWidget(newWidget);
+        this.props.history.push(`/user/${uid}/website/${wid}/page/${pid}/widget/${newWidget._id}`)
+    }
+
     render() {
+        const {uid, wid, pid} = this.props.match.params
         return (
             <div>
-                <nav className="navbar-light fixed-top bg-light">
+                <nav className="navbar navbar-light fixed-top bg-light">
                     <Link
                         className="color-black"
-                        to="/user/:uid/website/:wid/page/:pid/widget"
+                        to={`/user/${uid}/website/${wid}/page/${pid}/widget`}
                     >
                         <i className="fas fa-chevron-left" />
                     </Link>
-                    <Link
+                    <span
                         className="navbar-brand padding-left"
-                        to="/user/:uid/website/:wid/page/:pid/widget/new"
                     >
                         Choose Widget
-                    </Link>
+                    </span>
+                    <span></span>
                 </nav>
                 <div className="container">
                     <ul className="list-group-flush">
                         <li className="list-group-item">
-                            <Link to="/user/:uid/website/:wid/page/:pid/widget/:wgid">
+                            <span onClick={this.createWidget.bind(this, "HEADING")}>
                                 Heading
-                            </Link>
+                            </span>
                         </li>
                         <li className="list-group-item">
                             <Link to="#">Label</Link>
@@ -38,14 +58,14 @@ export default class WidgetChooser extends Component {
                             <Link to="#">Button</Link>
                         </li>
                         <li className="list-group-item">
-                            <Link to="/user/:uid/website/:wid/page/:pid/widget/:wgid">
+                            <span onClick={this.createWidget.bind(this, "IMAGE")}>
                                 Image
-                            </Link>
+                            </span>
                         </li>
                         <li className="list-group-item">
-                            <Link to="/user/:uid/website/:wid/page/:pid/widget/:wgid">
+                            <span onClick={this.createWidget.bind(this, "YOUTUBE")}>
                                 Youtube
-                            </Link>
+                            </span>
                         </li>
                         <li className="list-group-item">
                             <Link to="#">Data Table</Link>
